@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net5.0": {
+      "Acr.UserDialogs/7.2.0.534": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Acr.UserDialogs.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Acr.UserDialogs.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -2213,6 +2222,41 @@
     }
   },
   "libraries": {
+    "Acr.UserDialogs/7.2.0.534": {
+      "sha512": "Qy9+xPqABpRkdoJnN0oAdZ/LOKCm2sH8a1E+kG+muUc6e4oxiPL8G6WmrjuYNjtCvfH4KgdRe77X+DQXC4VWUA==",
+      "type": "package",
+      "path": "acr.userdialogs/7.2.0.534",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "acr.userdialogs.7.2.0.534.nupkg.sha512",
+        "acr.userdialogs.nuspec",
+        "lib/monoandroid10.0/Acr.UserDialogs.dll",
+        "lib/monoandroid10.0/Acr.UserDialogs.pdb",
+        "lib/monoandroid10.0/Acr.UserDialogs.xml",
+        "lib/monoandroid90/Acr.UserDialogs.dll",
+        "lib/monoandroid90/Acr.UserDialogs.pdb",
+        "lib/monoandroid90/Acr.UserDialogs.xml",
+        "lib/netstandard2.0/Acr.UserDialogs.dll",
+        "lib/netstandard2.0/Acr.UserDialogs.pdb",
+        "lib/netstandard2.0/Acr.UserDialogs.xml",
+        "lib/uap10.0.17763/Acr.UserDialogs.dll",
+        "lib/uap10.0.17763/Acr.UserDialogs.pdb",
+        "lib/uap10.0.17763/Acr.UserDialogs.pri",
+        "lib/uap10.0.17763/Acr.UserDialogs.xml",
+        "lib/uap10.0.17763/Acr.UserDialogs/Acr.UserDialogs.xr.xml",
+        "lib/xamarinios10/Acr.UserDialogs.dll",
+        "lib/xamarinios10/Acr.UserDialogs.pdb",
+        "lib/xamarinios10/Acr.UserDialogs.xml",
+        "lib/xamarinmac20/Acr.UserDialogs.dll",
+        "lib/xamarinmac20/Acr.UserDialogs.pdb",
+        "lib/xamarinmac20/Acr.UserDialogs.xml",
+        "lib/xamarintvos10/Acr.UserDialogs.dll",
+        "lib/xamarintvos10/Acr.UserDialogs.pdb",
+        "lib/xamarintvos10/Acr.UserDialogs.xml",
+        "readme.txt"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -7533,6 +7577,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Acr.UserDialogs >= 7.2.0.534",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.12",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 5.0.12",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.12",
@@ -7543,19 +7588,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\47524754809\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\47524754809\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\Roman.webAPI.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\Roman.webAPI.csproj",
       "projectName": "Roman.webAPI",
-      "projectPath": "C:\\Users\\47524754809\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\Roman.webAPI.csproj",
-      "packagesPath": "C:\\Users\\47524754809\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\47524754809\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\Roman.webAPI.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\47524754809\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7581,6 +7626,10 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Acr.UserDialogs": {
+            "target": "Package",
+            "version": "[7.2.0.534, )"
+          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[5.0.12, )"

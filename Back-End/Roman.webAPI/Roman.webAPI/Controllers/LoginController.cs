@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Acr.UserDialogs;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Roman.webAPI.Domains;
@@ -9,9 +10,11 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using static Roman.webAPI.ViewModels.ViewModels;
 
 namespace Roman.webAPI.Controllers
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class LoginController : ControllerBase
@@ -24,68 +27,53 @@ namespace Roman.webAPI.Controllers
         }
 
         /// <summary>
-        /// Valida o usuário
+        /// Método de login
         /// </summary>
-        /// <param name="login">Objeto login que contém o e-mail e a senha do usuário</param>
-        /// <returns>Retorna um token com as informações do usuário</returns>
-        /// dominio/api/Login
+        /// <param name="login">objeto loginViewModel</param>
+        /// <returns>JWT</returns>
         [HttpPost]
         public IActionResult Login(LoginViewModel login)
         {
             try
             {
-                Usuario usuarioBuscado = _usuarioRepository.Login(login.Email, login.Senha);
+                Usuario UsuarioBuscado = _usuarioRepository.Login(login.Email, login.Senha);
 
-                if (usuarioBuscado == null)
+                if (UsuarioBuscado == null)
                 {
-                    return BadRequest("E-mail ou senha inválidos!");
+                    return BadRequest("Usuario ou senha inválidos");
                 }
-
-                // Caso o usuário seja encontrado, prossegue para a criação do token
-
-                /*
-                    Dependências
-                    Criar e validar o JWT:      System.IdentityModel.Tokens.Jwt
-                    Integrar a autenticação:    Microsoft.AspNetCore.Authentication.JwtBearer (versão compatível com o .NET do projeto)
-                */
 
                 var minhasClaims = new[]
                 {
-                    new Claim(JwtRegisteredClaimNames.Email, usuarioBuscado.Email),
-                    new Claim(JwtRegisteredClaimNames.Jti, usuarioBuscado.IdUsuario.ToString()),
-                    new Claim(ClaimTypes.Role, usuarioBuscado.IdTipoUsuario.ToString()),
+                    new Claim(JwtRegisteredClaimNames.Email, UsuarioBuscado.Email),
+                    new Claim(JwtRegisteredClaimNames.Jti, UsuarioBuscado.IdUsuario.ToString()),
+                    new Claim(ClaimTypes.Role, UsuarioBuscado.IdTipoUsuario.ToString()),
 
-                    // armazena na Claim personalizada role o tipo de usuário que está logado
-                    new Claim("role", usuarioBuscado.IdTipoUsuario.ToString()),
-
-                    // Armazena na Claim o nome do usuário que foi autenticado
-                    new Claim(JwtRegisteredClaimNames.Name, usuarioBuscado.Nome)
-
-
+                    new Claim("role", UsuarioBuscado.IdTipoUsuario.ToString())
                 };
 
-
-
-                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("gufi-chave-autenticacao"));
+                var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("roman-chave-autenticacao"));
 
                 var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
                 var meuToken = new JwtSecurityToken(
-                        issuer: "gufi.webAPI",
-                        audience: "gufi.webAPI",
-                        claims: minhasClaims,
-                        expires: DateTime.Now.AddMinutes(30),
-                        signingCredentials: creds
+
+                    issuer: "roman.webAPI",
+                    audience: "roman.webAPI",
+                    claims: minhasClaims,
+                    expires: DateTime.Now.AddMinutes(30),
+                    signingCredentials: creds
                     );
 
                 return Ok(new
                 {
                     token = new JwtSecurityTokenHandler().WriteToken(meuToken)
                 });
+
             }
-            catch (Exception ex)
+            catch (Exception erro)
             {
-                return BadRequest(ex);
+                return BadRequest(erro);
             }
         }
     }

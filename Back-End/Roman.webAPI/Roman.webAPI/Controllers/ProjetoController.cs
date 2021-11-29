@@ -28,7 +28,7 @@ namespace Roman.webAPI.Controllers
         /// </summary>
         /// <returns>Uma lista de projetos</returns>
         /// 
-        [Authorize(Roles = "2")]
+        //[Authorize(Roles = "2")]
         [HttpGet]
         public IActionResult ListarTodos()
         {
@@ -48,7 +48,7 @@ namespace Roman.webAPI.Controllers
         /// <param name="novoProjeto">Um objeto com as propriedades a serem cadastradas</param>
         /// <returns>status code 201 created</returns>
         /// 
-        [Authorize(Roles = "2")]
+        //[Authorize(Roles = "2")]
         [HttpPost]
         public IActionResult Cadastrar(Projeto novoProjeto)
         {

@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Roman.webAPI</name>
+    </assembly>
+    <members>
+        <member name="M:Roman.webAPI.Controllers.LoginController.Login(Roman.webAPI.ViewModels.ViewModels.LoginViewModel)">
+            <summary>
+            Método de login
+            </summary>
+            <param name="login">objeto loginViewModel</param>
+            <returns>JWT</returns>
+        </member>
+        <member name="M:Roman.webAPI.Controllers.ProjetosController.ListarTodos">
+            <summary>
+            Lista todos os projetos
+            </summary>
+            <returns>Uma lista de projetos</returns>
+            
+        </member>
+        <member name="M:Roman.webAPI.Controllers.ProjetosController.Cadastrar(Roman.webAPI.Domains.Projeto)">
+            <summary>
+            Cadastra um novo projeto
+            </summary>
+            <param name="novoProjeto">Um objeto com as propriedades a serem cadastradas</param>
+            <returns>status code 201 created</returns>
+            
+        </member>
+        <member name="P:Roman.webAPI.Controllers.UsuarioController._usuarioRepository">
+            <summary>
+            Objeto _usuarioRepository que irá receber todos os métodos definidos na interface IuUsuarioRepository
+            </summary>
+        </member>
+        <member name="M:Roman.webAPI.Controllers.UsuarioController.#ctor">
+            <summary>
+            Instancia o objeto _usuarioRepository para que haja a referência aos métodos no repositório
+            </summary>
+        </member>
+        <member name="M:Roman.webAPI.Controllers.UsuarioController.Get">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Uma lista de usuários e um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Roman.webAPI.Controllers.UsuarioController.GetById(System.Int32)">
+            <summary>
+            Busca um usuário através do ID
+            </summary>
+            <param name="id">ID do usuário que será buscado</param>
+            <returns>Um usuário buscado e um status code 200 - Ok</returns>
+        </member>
+        <member name="M:Roman.webAPI.Controllers.UsuarioController.Post(Roman.webAPI.Domains.Usuario)">
+            <summary>
+            Cadastra um novo usuário
+            </summary>
+            <param name="novoUsuario">Objeto novoUsuario que será cadastrado</param>
+            <returns>Um status code 201 - Created</returns>
+        </member>
+        <member name="M:Roman.webAPI.Controllers.UsuarioController.Put(System.Int32,Roman.webAPI.Domains.Usuario)">
+            <summary>
+            Atualiza um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será atualizado</param>
+            <param name="usuarioAtualizado">Objeto com as novas informações</param>
+            <returns>Um status code 204 - No Content</returns>
+        </member>
+        <member name="M:Roman.webAPI.Controllers.UsuarioController.Delete(System.Int32)">
+            <summary>
+            Deleta um usuário existente
+            </summary>
+            <param name="id">ID do usuário que será deletado</param>
+            <returns>Um status code 204 - No Content</returns>
+        </member>
+        <member name="M:Roman.webAPI.Domains.Equipe.#ctor">
+            <summary>
+            Classe que representa entidade (tabela) de Equipes
+            </summary>
+        </member>
+        <member name="T:Roman.webAPI.Domains.Professor">
+            <summary>
+            Classe que representa entidade (tabela) de Professores
+            </summary>
+        </member>
+        <member name="T:Roman.webAPI.Domains.Projeto">
+            <summary>
+            Classe que representa entidade (tabela) de Projetos
+            </summary>
+        </member>
+        <member name="T:Roman.webAPI.Domains.Tema">
+            <summary>
+            Classe que representa entidade (tabela) de Temas
+            </summary>
+        </member>
+        <member name="T:Roman.webAPI.Domains.TipoUsuario">
+            <summary>
+            Classe que representa entidade (tabela) de TiposUsuario
+            </summary>
+        </member>
+        <member name="T:Roman.webAPI.Domains.Usuario">
+            <summary>
+            Classe que representa entidade (tabela) de Usuarios
+            </summary>
+        </member>
+        <member name="T:Roman.webAPI.ViewModels.ViewModels.LoginViewModel">
+            <summary>
+            Classe responsável pelo modelo de login
+            </summary>
+        </member>
+    </members>
+</doc>

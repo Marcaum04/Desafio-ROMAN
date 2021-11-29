@@ -65,3 +65,6 @@ C:\Users\48544763898\Desktop\Desafio-ROMAN\Back-End\Roman.webAPI\Roman.webAPI\ob
 C:\Users\48544763898\Desktop\Desafio-ROMAN\Back-End\Roman.webAPI\Roman.webAPI\obj\Debug\net5.0\ref\Roman.webAPI.dll
 C:\Users\48544763898\Desktop\Desafio-ROMAN\Back-End\Roman.webAPI\Roman.webAPI\obj\Debug\net5.0\Roman.webAPI.pdb
 C:\Users\48544763898\Desktop\Desafio-ROMAN\Back-End\Roman.webAPI\Roman.webAPI\obj\Debug\net5.0\Roman.webAPI.genruntimeconfig.cache
+C:\Users\48544763898\Desktop\Desafio-ROMAN\Back-End\Roman.webAPI\Roman.webAPI\bin\Debug\net5.0\Roman.webAPI.xml
+C:\Users\48544763898\Desktop\Desafio-ROMAN\Back-End\Roman.webAPI\Roman.webAPI\bin\Debug\net5.0\Acr.UserDialogs.dll
+C:\Users\48544763898\Desktop\Desafio-ROMAN\Back-End\Roman.webAPI\Roman.webAPI\obj\Debug\net5.0\Roman.webAPI.xml

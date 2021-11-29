@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\Roman.webAPI.csproj": {}
+    "C:\\Users\\48544763898\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\Roman.webAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\Roman.webAPI.csproj": {
+    "C:\\Users\\48544763898\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\Roman.webAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\Roman.webAPI.csproj",
+        "projectUniqueName": "C:\\Users\\48544763898\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\Roman.webAPI.csproj",
         "projectName": "Roman.webAPI",
-        "projectPath": "C:\\Users\\user\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\Roman.webAPI.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\obj\\",
+        "projectPath": "C:\\Users\\48544763898\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\Roman.webAPI.csproj",
+        "packagesPath": "C:\\Users\\48544763898\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\48544763898\\Desktop\\Desafio-ROMAN\\Back-End\\Roman.webAPI\\Roman.webAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\48544763898\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

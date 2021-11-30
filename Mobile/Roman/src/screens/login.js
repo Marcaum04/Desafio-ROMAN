@@ -8,9 +8,11 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
 import api from '../services/api';
 
-class Login extends Component {
+export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -98,7 +100,7 @@ const styles = StyleSheet.create({
   inputLogin: {
     width: 240,
     fontSize: 18,
-    color: '#FFF',
+    color: '#000',
     borderBottomColor: '#BBB',
     borderBottomWidth: 2,
   },
@@ -120,5 +122,3 @@ const styles = StyleSheet.create({
     shadowOffset: {height: 1, width: 1},
   },
 });
-
-export default Login;

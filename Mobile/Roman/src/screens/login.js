@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   StyleSheet,
   Text,
@@ -7,7 +8,6 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import api from '../services/api';
 
@@ -21,7 +21,6 @@ class Login extends Component {
   };
 
   realizarLogin = async () => {
-    console.warn(this.state.email + ' ' + this.state.senha);
 
     const resposta = await api.post('/Login', {
       email: this.state.email,
@@ -32,11 +31,8 @@ class Login extends Component {
     await AsyncStorage.setItem('userToken', token);
 
     if (resposta.status == 200) {
-      console.warn("teste")
-      this.props.navigation.navigate('Projetos');
+      this.props.navigation.navigate('Main');
     }
-
-    console.warn(token);
   };
 
   render() {

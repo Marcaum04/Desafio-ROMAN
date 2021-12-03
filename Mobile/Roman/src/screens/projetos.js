@@ -4,9 +4,7 @@ import {
     Text,
     View,
     FlatList,
-    TextInput,
     Image,
-    TouchableOpacity,
 } from 'react-native';
 
 import api from '../services/api';
@@ -32,6 +30,9 @@ class Projetos extends Component {
     render() {
         return (
             <View style={styles.main}>
+              <Image
+              style={styles.headerImage}
+              source={require('../../assets/img/header-logo.png')}/>
                 {/* Cabeçalho - Header */}
                 <View style={styles.mainHeader}>
                     <View style={styles.mainHeaderRow}>
@@ -56,8 +57,9 @@ class Projetos extends Component {
     renderItem = ({ item }) => (
         <View style={styles.flatItemRow}>
             <View style={styles.flatItemContainer}>
-                <Text style={styles.flatItemTitle}>{item.nomeProjeto}</Text>
-                <Text style={styles.flatItemInfo}>{item.descricao}</Text>
+                <Text style={styles.flatItemTitle}>{item.nomeProjeto} :</Text>
+                <Text style={styles.flatItemInfo}
+                numberOfLines={1}>{item.descricao}</Text>
             </View>
         </View>
     );
@@ -70,6 +72,10 @@ const styles = StyleSheet.create({
     main: {
       flex: 1,
       backgroundColor: '#FFF',
+    },
+    headerImage: {
+      width: '100%',
+      flex: 1,
     },
     // cabeçalho
     mainHeader: {
@@ -84,13 +90,13 @@ const styles = StyleSheet.create({
     mainHeaderText: {
       fontSize: 16,
       letterSpacing: 5,
-      color: '#999',
+      color: '#333',
     },
     // linha de separação do cabeçalho
     mainHeaderLine: {
       width: 220,
       paddingTop: 10,
-      borderBottomColor: '#999',
+      borderBottomColor: '#000',
       borderBottomWidth: 1,
     },
   
@@ -100,35 +106,31 @@ const styles = StyleSheet.create({
     },
     // conteúdo da lista
     mainBodyContent: {
-      paddingRight: 50,
-      paddingLeft: 50,
+      paddingRight: 10,
+      paddingLeft: 10,
     },
     // dados do evento de cada item da lista (ou seja, cada linha da lista)
     flatItemRow: {
       flexDirection: 'row',
       borderBottomWidth: 1,
-      borderBottomColor: '#ccc',
+      borderBottomColor: '#000',
       marginTop: 20,
     },
     flatItemContainer: {
       flex: 1,
+      flexDirection: 'row',
+      alignItems: 'center',
     },
     flatItemTitle: {
       fontSize: 16,
       color: '#333',
     },
     flatItemInfo: {
-      fontSize: 12,
-      color: '#999',
-      lineHeight: 24,
-    },
-    flatItemImg: {
-      justifyContent: 'center',
-    },
-    flatItemImgIcon: {
-      width: 26,
-      height: 26,
-      tintColor: '#B727FF',
+      fontSize: 14,
+      color: '#555',
+      lineHeight: 16,
+      width: '75%',
+      marginLeft: 8
     },
   });
 

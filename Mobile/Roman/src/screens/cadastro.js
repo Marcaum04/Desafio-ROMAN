@@ -30,7 +30,6 @@ class Cadastro extends Component {
         this.state = {
             idTema: 0,
             nomeProjeto: '',
-            idUsuario: parseJWT().Jti,
             Descricao: ''
         }
     }
@@ -43,7 +42,6 @@ class Cadastro extends Component {
                 {
                     idTema: this.state.idTema,
                     nomeProjeto: this.state.nomeProjeto,
-                    idUsuario: this.state.idUsuario,
                     descricao: this.state.descricao
                 },
                 {
@@ -59,7 +57,6 @@ class Cadastro extends Component {
                     nomeProjeto: '',
                     descricao: ''
                 })
-                console.warn(this.state.idUsuario)
             }
         } catch (error) {
             console.warn(error);

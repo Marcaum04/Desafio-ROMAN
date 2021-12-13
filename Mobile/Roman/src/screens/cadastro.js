@@ -41,7 +41,7 @@ class Cadastro extends Component {
                 {
                     idTema: this.state.idTema,
                     nomeProjeto: this.state.nomeProjeto,
-                    descricao: this.state.descricao
+                    descricao: this.state.descricaoProjeto
                 },
                 {
                     headers: {
@@ -54,7 +54,7 @@ class Cadastro extends Component {
                 this.setState({
                     idTema: 0,
                     nomeProjeto: '',
-                    descricao: ''
+                    descricaoProjeto: ''
                 })
             }
         } catch (error) {

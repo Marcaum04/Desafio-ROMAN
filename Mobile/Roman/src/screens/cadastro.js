@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 
 import api from '../services/api';
-import {parseJWT} from '../services/auth';
 import { Picker } from '@react-native-picker/picker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
